@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import Button from '../Button.vue';
+import Input from '../Input.vue';
 
 const formRegister = ref({
     name: '',
@@ -12,19 +13,13 @@ const formRegister = ref({
 <template>
     <form>
         <div class="mb-4">
-            <label class="block mb-1" for="name">Name</label>
-            <input placeholder="Type your full name" id="name" type="text" v-model="formRegister.name"
-                class="block w-full py-3 mt-2 border border-gray-300 rounded-full shadow-sm px-7 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 disabled:bg-gray-100" />
+            <Input type="text" label="Full name" v-model="formRegister.name" />
         </div>
         <div class="mb-4">
-            <label class="block mb-1" for="email">Email Address</label>
-            <input placeholder="Type your email" id="email" type="text" v-model="formRegister.email"
-                class="block w-full py-3 mt-2 border border-gray-300 rounded-full shadow-sm px-7 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 disabled:bg-gray-100" />
+            <Input type="email" label="Email" v-model="formRegister.email" />
         </div>
         <div class="mb-4">
-            <label class="block mb-1" for="password">Password</label>
-            <input placeholder="Type your password" id="password" type="password" v-model="formRegister.password"
-                class="block w-full py-3 mt-2 border border-gray-300 rounded-full shadow-sm px-7 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 disabled:bg-gray-100" />
+            <Input type="password" label="Password" v-model="formRegister.password" />
         </div>
         <div class="mt-6">
             <Button text="Continue Sign Up" path="/login"
