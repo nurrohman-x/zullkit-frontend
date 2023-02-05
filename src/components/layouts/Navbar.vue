@@ -9,9 +9,9 @@ import Button from '../Button.vue';
         <div class="container flex flex-wrap items-center justify-between mx-auto my-2">
             <Logo />
             <div class="md:order-2">
-                <Button text="Login" path="/login"
-                    className="mr-2 text-black bg-gray-200 hover:bg-gray-300 md:text-sm md:px-8" />
-                <Button text="Register" path="/register"
+                <Button text="Sign In" path="/login"
+                    className="mt-2 mr-2 text-black bg-gray-200 hover:bg-gray-300 md:text-sm md:px-8" />
+                <Button text="Sign Up" path="/register"
                     className="text-white bg-navy hover:bg-navy md:text-sm md:px-8" />
             </div>
             <NavLink />
